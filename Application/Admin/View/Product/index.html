@@ -1,0 +1,18 @@
+	<div class="content product-list">
+		<h1 style="text-align: center;width: 800px;margin: 0 auto;margin-top:20px;margin-bottom:20px;position: relative;">产品服务列表
+		<a href="<{:U('admin/product/edit')}>" style="padding: 5px 8px;background:#9bb7f6;color: #fff;display: inline-block;width: 60px;text-align: center;text-decoration: none;border-radius: 4px;position: absolute;font-size: 16px;right: 12px;top: 5px;">新增</a></h1>
+		<div class="lists" style="width: 800px;margin: 0 auto;border:1px solid #eee;border-radius: 8px;padding: 12px 0;">
+			<volist name="product" id="data">
+				<div class="item" style="border-bottom:1px solid #ddd;padding: 0 12px;padding-right:80px;position: relative;">
+					<{$data.title}><br/>
+					<{$data.brief}><br>
+					<img src="<{$data.banner}>" style="width: 60px;">
+					<div style="position: absolute;right: 12px;top: 12px;">
+						<a href="<{:U('admin/product/edit',array('id'=>$data['id']))}>" style="padding: 5px 8px;background:#9bb7f6;color: #fff;display: inline-block;width: 60px;text-align: center;text-decoration: none;border-radius: 4px;">编辑</a>
+					</div>
+				</div>
+			</volist>
+		</div>
+	</div>
+</body>
+</html>

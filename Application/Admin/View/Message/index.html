@@ -1,0 +1,15 @@
+	<div class="content msg-list">
+		<h1 style="text-align: center;width: 800px;margin: 0 auto;margin-top:20px;margin-bottom:20px;position: relative;">留言列表
+		<div class="lists" style="width: 800px;margin: 0 auto;border:1px solid #eee;border-radius: 8px;padding: 12px 0;">
+			<volist name="message" id="data">
+				<div class="item" style="border-bottom:1px solid #ddd;padding:12px;padding-right:80px;position: relative;font-size: 12px;font-weight: 400;text-align: left;">
+					姓名：<{$data.uname}>&nbsp;&nbsp;
+					手机：<{$data.phone}>&nbsp;&nbsp;
+					邮箱：<{$data.email}><br>
+					留言内容：<div><{$data.issue}></div>
+				</div>
+			</volist>
+		</div>
+	</div>
+</body>
+</html>
